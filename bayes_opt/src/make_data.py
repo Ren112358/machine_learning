@@ -12,8 +12,10 @@ def f(x):
 
 
 def main():
-    x = np.linspace(-1, 1, 100)
-    y = f(x)
+    n = 100
+    x = np.linspace(-1, 1, n)
+    noise = np.random.normal(size=n)
+    y = f(x) +  0.1 * noise
     data = np.vstack((x, y)).T
     np.savetxt(fname='../data/data.txt', X=data, header='x,y')
 
