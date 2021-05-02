@@ -17,6 +17,9 @@ def main():
     data = np.vstack((x, y)).T
     np.savetxt(fname='../data/data.txt', X=data, header='x,y')
 
+    plt.plot(x, y)
+    plt.show()
+
 
 if __name__ == '__main__':
     main()
